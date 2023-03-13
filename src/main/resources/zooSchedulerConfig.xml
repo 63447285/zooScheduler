@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!--zookeeper地址-->
+    <zkServer address="atlasmaster:2181,atlas01:2181,atlas02:2181"/>
+    <!--插件注册路径-->
+    <plugins path="/atlas/plugins"/>
+    <!--服务注册路径-->
+    <services path="/atlas/services"/>
+    <!--服务的规模标签，id固定为Large、Medium、Small（不可改变），precents为规定的占比，可根据需要进行配置-->
+    <ServiceScales>
+        <ServiceScale id="Large" precents="30"></ServiceScale>
+        <ServiceScale id="Small" precents="5"></ServiceScale>
+    </ServiceScales>
+    <!--任务的规模标签，id固定为Large、Medium、Small（不可改变），precents为规定的占比，可根据需要进行配置-->
+    <TaskScales>
+        <TaskScale id="Large" precents="24"></TaskScale>
+        <TaskScale id="Medium" precents="12"></TaskScale>
+        <TaskScale id="Small" precents="4"></TaskScale>
+    </TaskScales>
+</configuration>
